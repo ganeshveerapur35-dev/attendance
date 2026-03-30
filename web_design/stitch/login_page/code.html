@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Digital Registrar | Secure Access</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "error": "#ba1a1a",
+                "surface": "#f8f9fb",
+                "on-primary-fixed": "#001453",
+                "inverse-surface": "#2e3132",
+                "tertiary-fixed-dim": "#ffb59a",
+                "surface-container-highest": "#e1e2e4",
+                "secondary-fixed": "#d8e2ff",
+                "on-background": "#191c1e",
+                "on-tertiary-fixed-variant": "#802a00",
+                "on-secondary-fixed": "#001a42",
+                "on-surface": "#191c1e",
+                "on-tertiary-container": "#ffa583",
+                "tertiary-container": "#872d00",
+                "on-tertiary-fixed": "#380d00",
+                "primary-fixed-dim": "#b8c4ff",
+                "inverse-on-surface": "#f0f1f3",
+                "outline": "#757684",
+                "secondary": "#0058be",
+                "on-error-container": "#93000a",
+                "surface-dim": "#d9dadc",
+                "primary-fixed": "#dde1ff",
+                "primary-container": "#1e40af",
+                "outline-variant": "#c4c5d5",
+                "surface-tint": "#3755c3",
+                "on-primary-fixed-variant": "#173bab",
+                "on-secondary-fixed-variant": "#004395",
+                "error-container": "#ffdad6",
+                "on-surface-variant": "#444653",
+                "surface-variant": "#e1e2e4",
+                "secondary-fixed-dim": "#adc6ff",
+                "surface-container-high": "#e7e8ea",
+                "secondary-container": "#2170e4",
+                "on-tertiary": "#ffffff",
+                "surface-bright": "#f8f9fb",
+                "tertiary-fixed": "#ffdbce",
+                "surface-container-lowest": "#ffffff",
+                "on-secondary-container": "#fefcff",
+                "on-error": "#ffffff",
+                "on-secondary": "#ffffff",
+                "background": "#f8f9fb",
+                "on-primary-container": "#a8b8ff",
+                "surface-container-low": "#f3f4f6",
+                "inverse-primary": "#b8c4ff",
+                "surface-container": "#edeef0",
+                "primary": "#00288e",
+                "on-primary": "#ffffff",
+                "tertiary": "#611e00"
+              },
+              fontFamily: {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .headline-font {
+            font-family: 'Manrope', sans-serif;
+        }
+        .login-gradient-btn {
+            background: linear-gradient(135deg, #00288e 0%, #1e40af 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface min-h-screen flex items-center justify-center p-4">
+<!-- Main Container Asymmetric Layout -->
+<div class="max-w-5xl w-full grid grid-cols-1 md:grid-cols-12 gap-0 md:gap-8 items-center">
+<!-- Left Side: Editorial Content (Visual Anchor) -->
+<div class="hidden md:flex md:col-span-7 flex-col space-y-6 pr-12">
+<div class="space-y-2">
+<span class="text-primary font-label text-sm font-bold tracking-[0.2em] uppercase">Academic Excellence</span>
+<h1 class="headline-font text-5xl font-extrabold text-on-surface leading-tight tracking-tight">
+                    The Modern Standard for <span class="text-primary">Institutional Records.</span>
+</h1>
+</div>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-md">
+                Experience the precision of the Digital Registrar. An authoritative environment designed for administrative calm and data integrity.
+            </p>
+<div class="pt-8 flex items-center gap-4">
+<div class="h-12 w-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">verified_user</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Secure Infrastructure</p>
+<p class="text-sm text-on-surface-variant">Enterprise-grade encryption for student data.</p>
+</div>
+</div>
+</div>
+<!-- Right Side: The Login Card -->
+<div class="md:col-span-5 w-full">
+<div class="bg-surface-container-lowest p-8 md:p-10 rounded-xl shadow-[0_24px_48px_-12px_rgba(25,28,30,0.04)] border border-outline-variant/10 relative overflow-hidden">
+<!-- Brand Identity -->
+<div class="flex flex-col items-center mb-10">
+<div class="h-16 w-16 bg-surface-container-low rounded-xl flex items-center justify-center mb-6 shadow-sm">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">school</span>
+</div>
+<h2 class="headline-font text-2xl font-bold text-on-surface tracking-tight">Digital Registrar</h2>
+<p class="text-on-surface-variant text-sm mt-1">Institutional Portal Access</p>
+</div>
+<!-- Login Form -->
+<form class="space-y-6">
+<div class="space-y-1.5">
+<label class="text-xs font-bold uppercase tracking-wider text-outline ml-1" for="id">Email or Staff ID</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline group-focus-within:text-primary transition-colors text-xl">person</span>
+</div>
+<input class="block w-full pl-11 pr-4 py-3.5 bg-surface-container-highest border-none rounded-lg text-on-surface placeholder:text-outline/60 focus:ring-1 focus:ring-primary focus:bg-surface-container-lowest transition-all outline-none text-sm" id="id" name="id" placeholder="registrar@academy.edu" type="text"/>
+</div>
+</div>
+<div class="space-y-1.5">
+<div class="flex justify-between items-center">
+<label class="text-xs font-bold uppercase tracking-wider text-outline ml-1" for="password">Secure Password</label>
+<a class="text-xs font-semibold text-primary hover:underline" href="#">Forgot?</a>
+</div>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline group-focus-within:text-primary transition-colors text-xl">lock</span>
+</div>
+<input class="block w-full pl-11 pr-4 py-3.5 bg-surface-container-highest border-none rounded-lg text-on-surface placeholder:text-outline/60 focus:ring-1 focus:ring-primary focus:bg-surface-container-lowest transition-all outline-none text-sm" id="password" name="password" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<div class="flex items-center space-x-2 py-1">
+<input class="w-4 h-4 rounded border-outline-variant text-primary focus:ring-primary/20" id="remember" type="checkbox"/>
+<label class="text-sm text-on-surface-variant" for="remember">Remember this workstation</label>
+</div>
+<button class="w-full login-gradient-btn text-on-primary py-4 rounded-lg font-bold shadow-md hover:shadow-lg hover:opacity-95 transition-all transform active:scale-95 flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-xl">login</span>
+                        Secure Login
+                    </button>
+</form>
+<!-- Help Link -->
+<div class="mt-10 pt-6 border-t border-outline-variant/10 text-center">
+<p class="text-xs text-on-surface-variant">
+                        Technical issues? <a class="text-primary font-bold hover:underline" href="#">Contact System Administrator</a>
+</p>
+</div>
+</div>
+<!-- Footer Meta -->
+<div class="mt-8 flex justify-between items-center px-2">
+<span class="text-[10px] uppercase tracking-widest text-outline/60 font-bold">V 2.4.0 Stable</span>
+<div class="flex gap-4">
+<span class="text-[10px] uppercase tracking-widest text-outline/60 font-bold">Privacy Policy</span>
+<span class="text-[10px] uppercase tracking-widest text-outline/60 font-bold">Terms of Service</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Background Decorative Elements -->
+<div class="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
+<div class="absolute top-[-10%] left-[-5%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[-10%] right-[-5%] w-[30%] h-[30%] bg-secondary-container/5 rounded-full blur-[100px]"></div>
+</div>
+</body></html>

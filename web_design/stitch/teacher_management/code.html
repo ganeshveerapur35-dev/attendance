@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Teacher Management | Digital Registrar</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error": "#ba1a1a",
+              "surface": "#f8f9fb",
+              "on-primary-fixed": "#001453",
+              "inverse-surface": "#2e3132",
+              "tertiary-fixed-dim": "#ffb59a",
+              "surface-container-highest": "#e1e2e4",
+              "secondary-fixed": "#d8e2ff",
+              "on-background": "#191c1e",
+              "on-tertiary-fixed-variant": "#802a00",
+              "on-secondary-fixed": "#001a42",
+              "on-surface": "#191c1e",
+              "on-tertiary-container": "#ffa583",
+              "tertiary-container": "#872d00",
+              "on-tertiary-fixed": "#380d00",
+              "primary-fixed-dim": "#b8c4ff",
+              "inverse-on-surface": "#f0f1f3",
+              "outline": "#757684",
+              "secondary": "#0058be",
+              "on-error-container": "#93000a",
+              "surface-dim": "#d9dadc",
+              "primary-fixed": "#dde1ff",
+              "primary-container": "#1e40af",
+              "outline-variant": "#c4c5d5",
+              "surface-tint": "#3755c3",
+              "on-primary-fixed-variant": "#173bab",
+              "on-secondary-fixed-variant": "#004395",
+              "error-container": "#ffdad6",
+              "on-surface-variant": "#444653",
+              "surface-variant": "#e1e2e4",
+              "secondary-fixed-dim": "#adc6ff",
+              "surface-container-high": "#e7e8ea",
+              "secondary-container": "#2170e4",
+              "on-tertiary": "#ffffff",
+              "surface-bright": "#f8f9fb",
+              "tertiary-fixed": "#ffdbce",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-container": "#fefcff",
+              "on-error": "#ffffff",
+              "on-secondary": "#ffffff",
+              "background": "#f8f9fb",
+              "on-primary-container": "#a8b8ff",
+              "surface-container-low": "#f3f4f6",
+              "inverse-primary": "#b8c4ff",
+              "surface-container": "#edeef0",
+              "primary": "#00288e",
+              "on-primary": "#ffffff",
+              "tertiary": "#611e00"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- SideNavBar Anchor -->
+<aside class="h-screen w-64 fixed left-0 top-0 flex flex-col bg-slate-100 dark:bg-slate-950 p-4 gap-2 z-40">
+<div class="mb-8 px-2">
+<h2 class="font-manrope font-extrabold text-blue-900 dark:text-white text-xl tracking-tight">Digital Registrar</h2>
+<p class="text-xs font-manrope font-medium text-slate-500 mt-1">Academic Year 2023-24</p>
+</div>
+<nav class="flex flex-col gap-1 flex-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all rounded-lg font-manrope font-medium text-sm" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-blue-900 text-white rounded-lg shadow-md font-manrope font-medium text-sm" href="#">
+<span class="material-symbols-outlined">school</span>
+<span>Teachers</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all rounded-lg font-manrope font-medium text-sm" href="#">
+<span class="material-symbols-outlined">group</span>
+<span>Students</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all rounded-lg font-manrope font-medium text-sm" href="#">
+<span class="material-symbols-outlined">event_available</span>
+<span>Attendance</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all rounded-lg font-manrope font-medium text-sm" href="#">
+<span class="material-symbols-outlined">assessment</span>
+<span>Reports</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all rounded-lg font-manrope font-medium text-sm" href="#">
+<span class="material-symbols-outlined">notifications</span>
+<span>Notifications</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all rounded-lg font-manrope font-medium text-sm" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="mt-auto pt-4 border-t border-slate-200/50">
+<button class="flex items-center gap-3 px-4 py-3 w-full text-error font-manrope font-medium text-sm hover:bg-error-container/20 rounded-lg transition-colors">
+<span class="material-symbols-outlined">logout</span>
+<span>Logout</span>
+</button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 min-h-screen">
+<!-- TopNavBar Anchor -->
+<header class="fixed top-0 right-0 left-64 h-16 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md z-30 flex items-center justify-between px-8 border-b border-slate-200/50">
+<div class="flex items-center gap-4">
+<h1 class="text-xl font-manrope font-bold tracking-tight text-blue-900">Faculty Registry</h1>
+</div>
+<div class="flex items-center gap-3">
+<div class="relative group">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline text-lg">search</span>
+<input class="bg-surface-container-high border-none rounded-full py-2 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary/20 w-64 transition-all" placeholder="Search faculty..." type="text"/>
+</div>
+<button class="p-2 text-slate-500 hover:bg-slate-100 rounded-full transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="h-8 w-8 rounded-full overflow-hidden bg-primary-fixed border border-outline-variant flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="professional headshot of a male school administrator with warm lighting and blurred office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7haOQBwLgLsJAIcCNbGwK6QtPuuIzIiSuSuD_1zzfaKcPZp95p5w12lLXDtZoBpSpyVrI5dBc7quTlv7BeS79CbFcUWow6Es6CmPL8b8nE-OVu2tsxVJPUjfX6s7ibR10YfsoF0YFxtWMpQBIy4JrM10Poi_liMmUHtMHf3-Oy2rwNA4N3S-vRgPIQudexAqQLVLzJIGH1_4oZp_3pfwL_4FHJDI6GA9I4Glma41WX2cFN8SZc_o6ztkI3CBcT2uKwRFOOfLJYHQ"/>
+</div>
+</div>
+</header>
+<!-- Content Canvas -->
+<div class="pt-24 pb-12 px-8">
+<!-- Header Section -->
+<div class="flex items-center justify-between mb-8">
+<div>
+<h2 class="text-3xl font-manrope font-extrabold tracking-tight text-on-surface">Teachers</h2>
+<p class="text-on-surface-variant mt-1 text-sm">Managing 48 faculty members across 12 departments.</p>
+</div>
+<button class="flex items-center gap-2 bg-gradient-to-br from-primary to-primary-container text-white px-5 py-2.5 rounded-lg shadow-md hover:scale-95 transition-all active:opacity-80 font-medium">
+<span class="material-symbols-outlined">add</span>
+<span>Add Teacher</span>
+</button>
+</div>
+<!-- Dashboard Stats (Editorial Style) -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+<div class="bg-surface-container-low p-6 rounded-xl">
+<span class="text-xs font-bold uppercase tracking-widest text-outline mb-2 block">Total Faculty</span>
+<div class="flex items-end justify-between">
+<span class="text-3xl font-manrope font-extrabold text-primary">48</span>
+<span class="text-primary-container text-xs bg-primary-fixed px-2 py-1 rounded-full">+2 this month</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl border-l-4 border-secondary">
+<span class="text-xs font-bold uppercase tracking-widest text-outline mb-2 block">Departments</span>
+<div class="flex items-end justify-between">
+<span class="text-3xl font-manrope font-extrabold text-secondary">12</span>
+<span class="material-symbols-outlined text-outline">account_tree</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl">
+<span class="text-xs font-bold uppercase tracking-widest text-outline mb-2 block">Present Today</span>
+<div class="flex items-end justify-between">
+<span class="text-3xl font-manrope font-extrabold text-on-surface">45</span>
+<span class="text-tertiary font-bold text-xs">94% Rate</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl">
+<span class="text-xs font-bold uppercase tracking-widest text-outline mb-2 block">Vacancies</span>
+<div class="flex items-end justify-between">
+<span class="text-3xl font-manrope font-extrabold text-error">3</span>
+<span class="material-symbols-outlined text-error">warning</span>
+</div>
+</div>
+</div>
+<!-- Main Table Container -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden p-2">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low/50">
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-outline">Teacher Name</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-outline">Employee ID</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-outline">Subject Specialist</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-outline">Status</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-outline text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 rounded-full bg-slate-200 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="professional portrait of a female teacher with glasses smiling, neutral lighting, university library background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsetmK-jUIiAxynHc89M05zLyoIPGYq72YhfTE3Ux6EMhpiOVSLc-nAJmSDku1P3TSL_l-bs_fkopgZuoxNs6hgumvFoOSpRy12U5q2YMd91arN5sCkFDD5hyChc_I-RFVMFNf6kbYdZZexz8X7Fcu9GRLlizG7hxNzAnSJhQLLbjRTdq-DonSy2xZ8sBQfd_ETDuwb9SKLDMp8W3vDZuptYLeLZMlA76AZNHR0T3JamgkbVvdzh8YtXZmWPHF9KjGBSg5jQqrtrM"/>
+</div>
+<div>
+<div class="font-semibold text-on-surface">Dr. Sarah Jenkins</div>
+<div class="text-xs text-on-surface-variant">sarah.j@digitalregistrar.edu</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="font-manrope font-medium text-slate-600">TR-8829-01</span>
+</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant rounded-full text-xs font-medium">Advanced Mathematics</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<div class="h-2 w-2 rounded-full bg-primary-container"></div>
+<span class="text-xs font-medium">Present</span>
+</div>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex items-center justify-end gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 text-outline hover:text-primary hover:bg-primary/10 rounded-lg transition-all">
+<span class="material-symbols-outlined text-xl">edit</span>
+</button>
+<button class="p-2 text-outline hover:text-error hover:bg-error/10 rounded-lg transition-all">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 rounded-full bg-slate-200 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="close-up portrait of a male history teacher, sharp professional attire, soft daylight from a window" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW3uAaWi0m7P8Ys4i_jYzyJbnbHoRWLnxhK4O0f3FuFK1hmzzszfbUxbY95lIEO_y6lfXRcWJlXNhWXBzoSLv1COnyNoZMqq2alwwilwRuDLgnbc7Z3PklTRRRodcemPgNPKq5_rOyvxBMZuIod47C3hKuDCZfrngVKKoYvWDmnCJRtWBPXXwejJptls3m5hQU7qdi2utGS1FoihhB0Xhwn4jQzrkKyGkLL7iZtcwVQPzcDE_0SXO8eU89uet5g_UNDdltEGtk2ws"/>
+</div>
+<div>
+<div class="font-semibold text-on-surface">Marcus Thorne</div>
+<div class="text-xs text-on-surface-variant">m.thorne@digitalregistrar.edu</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="font-manrope font-medium text-slate-600">TR-9112-05</span>
+</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed-variant rounded-full text-xs font-medium">Modern History</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<div class="h-2 w-2 rounded-full bg-error"></div>
+<span class="text-xs font-medium">On Leave</span>
+</div>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex items-center justify-end gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 text-outline hover:text-primary hover:bg-primary/10 rounded-lg transition-all">
+<span class="material-symbols-outlined text-xl">edit</span>
+</button>
+<button class="p-2 text-outline hover:text-error hover:bg-error/10 rounded-lg transition-all">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 rounded-full bg-slate-200 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="professional portrait of a confident female physics teacher in a modern laboratory setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3NI-3n73Y6N-yJ6IpZ0xSPEpaMtaipCLFuOrXdcS8e0lbTGl6QqLF4IM1Fo9sh_7-lEg4Oa5mp6RECcWfE5Ddq8ZDUkh37nGN06jq2Re-A7IpdCLVOutnDKaWdZiU9p6wFQstwSCriQCtdQZEM9a9y51QLO6rKcoikIlciMnnoaUT303hUlZiSLjqx7NdC_ND3a5L1dbMR9wpPT8WchUYyyLVChgdHvw4YaKfs6gI-gOCh4n_UAtJNd7DXaYEWoBO-r34MxLnmxY"/>
+</div>
+<div>
+<div class="font-semibold text-on-surface">Lydia Vance</div>
+<div class="text-xs text-on-surface-variant">l.vance@digitalregistrar.edu</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="font-manrope font-medium text-slate-600">TR-4432-09</span>
+</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-full text-xs font-medium">Applied Physics</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<div class="h-2 w-2 rounded-full bg-primary-container"></div>
+<span class="text-xs font-medium">Present</span>
+</div>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex items-center justify-end gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 text-outline hover:text-primary hover:bg-primary/10 rounded-lg transition-all">
+<span class="material-symbols-outlined text-xl">edit</span>
+</button>
+<button class="p-2 text-outline hover:text-error hover:bg-error/10 rounded-lg transition-all">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 rounded-full bg-slate-200 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="headshot of a female literature teacher, soft focus bookshelf background, professional and intellectual look" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt0RCkgga-Cfv2xZSg31volTSFZF7WO1E4a2wlvJjzZj4JrNchb5Ni08GH1yZxfzv5JwvxlJaNxSOEgU8RuEn7lcbMwENwiXpM9KXAaxwsYqbz0Oa69h3z4a6GtWb5qsMLTAnwRxesz4nwL_HI13ePhYhoA2kFP0UnViCTz7_Yu5KhvC6qoq8YmHID1hqGsji0HCTioEl_gSgvo1dnh0DlbZSpHcnxtomkD98jfpN1pej9CquhWLIQSo5MNFtejReF4CFy1XdrnDY"/>
+</div>
+<div>
+<div class="font-semibold text-on-surface">Elena Rodriguez</div>
+<div class="text-xs text-on-surface-variant">e.rodriguez@digitalregistrar.edu</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="font-manrope font-medium text-slate-600">TR-1029-02</span>
+</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant rounded-full text-xs font-medium">English Literature</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<div class="h-2 w-2 rounded-full bg-primary-container"></div>
+<span class="text-xs font-medium">Present</span>
+</div>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex items-center justify-end gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 text-outline hover:text-primary hover:bg-primary/10 rounded-lg transition-all">
+<span class="material-symbols-outlined text-xl">edit</span>
+</button>
+<button class="p-2 text-outline hover:text-error hover:bg-error/10 rounded-lg transition-all">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Pagination -->
+<div class="flex items-center justify-between px-6 py-4 bg-surface-container-low/30 border-t border-slate-100">
+<span class="text-xs text-on-surface-variant font-medium">Showing 1 to 4 of 48 faculty</span>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-surface-container-high rounded-lg text-outline transition-colors disabled:opacity-30" disabled="">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center bg-primary text-white rounded-lg text-xs font-bold">1</button>
+<button class="w-8 h-8 flex items-center justify-center hover:bg-surface-container-high rounded-lg text-xs font-medium transition-colors">2</button>
+<button class="w-8 h-8 flex items-center justify-center hover:bg-surface-container-high rounded-lg text-xs font-medium transition-colors">3</button>
+<button class="p-2 hover:bg-surface-container-high rounded-lg text-outline transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Modal Backdrop (Hidden by default, shown for Add Teacher action) -->
+<div class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+<div class="bg-surface-container-lowest w-full max-w-lg rounded-2xl shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-300">
+<div class="px-8 pt-8 pb-4">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-2xl font-manrope font-extrabold text-on-surface">Register New Faculty</h3>
+<button class="text-outline hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<form class="space-y-5">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-1.5">
+<label class="text-xs font-bold uppercase tracking-wider text-outline px-1">First Name</label>
+<input class="w-full bg-surface-container-high border-none rounded-xl py-3 px-4 text-sm focus:ring-2 focus:ring-primary/20 transition-all outline-none" placeholder="e.g. Robert" type="text"/>
+</div>
+<div class="space-y-1.5">
+<label class="text-xs font-bold uppercase tracking-wider text-outline px-1">Last Name</label>
+<input class="w-full bg-surface-container-high border-none rounded-xl py-3 px-4 text-sm focus:ring-2 focus:ring-primary/20 transition-all outline-none" placeholder="e.g. Miller" type="text"/>
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="text-xs font-bold uppercase tracking-wider text-outline px-1">Employee Email</label>
+<input class="w-full bg-surface-container-high border-none rounded-xl py-3 px-4 text-sm focus:ring-2 focus:ring-primary/20 transition-all outline-none" placeholder="robert.m@digitalregistrar.edu" type="email"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-1.5">
+<label class="text-xs font-bold uppercase tracking-wider text-outline px-1">Specialization</label>
+<select class="w-full bg-surface-container-high border-none rounded-xl py-3 px-4 text-sm focus:ring-2 focus:ring-primary/20 transition-all outline-none appearance-none">
+<option>Select Subject</option>
+<option>Mathematics</option>
+<option>Physics</option>
+<option>Literature</option>
+<option>Arts</option>
+</select>
+</div>
+<div class="space-y-1.5">
+<label class="text-xs font-bold uppercase tracking-wider text-outline px-1">Staff ID</label>
+<input class="w-full bg-surface-container-high border-none rounded-xl py-3 px-4 text-sm focus:ring-2 focus:ring-primary/20 transition-all outline-none" placeholder="TR-XXXX-XX" type="text"/>
+</div>
+</div>
+<div class="pt-4 flex gap-3">
+<button class="flex-1 py-3 text-sm font-semibold text-on-surface-variant hover:bg-surface-container-high rounded-xl transition-all" type="button">
+                            Cancel
+                        </button>
+<button class="flex-1 py-3 text-sm font-semibold bg-gradient-to-br from-primary to-primary-container text-white rounded-xl shadow-lg shadow-primary/20 hover:scale-[0.98] transition-all" type="submit">
+                            Complete Registration
+                        </button>
+</div>
+</form>
+</div>
+<div class="bg-surface-container-low px-8 py-4 mt-4">
+<p class="text-[10px] text-outline leading-tight italic">All faculty registrations are logged and subject to administrative approval for payroll integration.</p>
+</div>
+</div>
+</div>
+</body></html>

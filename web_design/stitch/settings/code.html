@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Settings | Digital Registrar</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error": "#ba1a1a",
+              "surface": "#f8f9fb",
+              "on-primary-fixed": "#001453",
+              "inverse-surface": "#2e3132",
+              "tertiary-fixed-dim": "#ffb59a",
+              "surface-container-highest": "#e1e2e4",
+              "secondary-fixed": "#d8e2ff",
+              "on-background": "#191c1e",
+              "on-tertiary-fixed-variant": "#802a00",
+              "on-secondary-fixed": "#001a42",
+              "on-surface": "#191c1e",
+              "on-tertiary-container": "#ffa583",
+              "tertiary-container": "#872d00",
+              "on-tertiary-fixed": "#380d00",
+              "primary-fixed-dim": "#b8c4ff",
+              "inverse-on-surface": "#f0f1f3",
+              "outline": "#757684",
+              "secondary": "#0058be",
+              "on-error-container": "#93000a",
+              "surface-dim": "#d9dadc",
+              "primary-fixed": "#dde1ff",
+              "primary-container": "#1e40af",
+              "outline-variant": "#c4c5d5",
+              "surface-tint": "#3755c3",
+              "on-primary-fixed-variant": "#173bab",
+              "on-secondary-fixed-variant": "#004395",
+              "error-container": "#ffdad6",
+              "on-surface-variant": "#444653",
+              "surface-variant": "#e1e2e4",
+              "secondary-fixed-dim": "#adc6ff",
+              "surface-container-high": "#e7e8ea",
+              "secondary-container": "#2170e4",
+              "on-tertiary": "#ffffff",
+              "surface-bright": "#f8f9fb",
+              "tertiary-fixed": "#ffdbce",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-container": "#fefcff",
+              "on-error": "#ffffff",
+              "on-secondary": "#ffffff",
+              "background": "#f8f9fb",
+              "on-primary-container": "#a8b8ff",
+              "surface-container-low": "#f3f4f6",
+              "inverse-primary": "#b8c4ff",
+              "surface-container": "#edeef0",
+              "primary": "#00288e",
+              "on-primary": "#ffffff",
+              "tertiary": "#611e00"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface flex min-h-screen">
+<!-- SideNavBar Component -->
+<aside class="h-screen w-64 fixed left-0 top-0 flex flex-col bg-slate-100 dark:bg-slate-950 p-4 gap-2 z-40">
+<div class="mb-8 px-2">
+<h1 class="font-manrope font-extrabold text-blue-900 dark:text-white text-xl">Digital Registrar</h1>
+<p class="text-xs text-slate-500 font-medium tracking-normal mt-1">Principal's Portal</p>
+</div>
+<nav class="flex flex-col gap-1 flex-1">
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all rounded-lg font-manrope font-medium text-sm" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all rounded-lg font-manrope font-medium text-sm" href="#">
+<span class="material-symbols-outlined">school</span>
+<span>Teachers</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all rounded-lg font-manrope font-medium text-sm" href="#">
+<span class="material-symbols-outlined">group</span>
+<span>Students</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all rounded-lg font-manrope font-medium text-sm" href="#">
+<span class="material-symbols-outlined">event_available</span>
+<span>Attendance</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all rounded-lg font-manrope font-medium text-sm" href="#">
+<span class="material-symbols-outlined">assessment</span>
+<span>Reports</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all rounded-lg font-manrope font-medium text-sm" href="#">
+<span class="material-symbols-outlined">notifications</span>
+<span>Notifications</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 bg-blue-900 text-white rounded-lg shadow-md font-manrope font-medium text-sm" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="mt-auto border-t border-slate-200/50 pt-4">
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:text-error transition-all rounded-lg font-manrope font-medium text-sm" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span>Logout</span>
+</a>
+</div>
+</aside>
+<main class="flex-1 ml-64 min-h-screen">
+<!-- TopNavBar Component -->
+<header class="fixed top-0 right-0 left-64 h-16 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md flex items-center justify-between px-8 z-30 shadow-sm dark:shadow-none">
+<div class="flex items-center gap-4">
+<h2 class="font-manrope font-bold tracking-tight text-blue-900 dark:text-blue-400 text-lg">System Configuration</h2>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="h-8 w-8 rounded-full bg-primary-container flex items-center justify-center text-white text-xs font-bold">
+<span class="material-symbols-outlined">account_circle</span>
+</div>
+</div>
+</header>
+<!-- Page Content -->
+<div class="mt-16 p-8 max-w-6xl mx-auto">
+<div class="grid grid-cols-12 gap-8">
+<!-- Section 1: School Details (Asymmetric Bento Card) -->
+<section class="col-span-12 lg:col-span-7 bg-surface-container-low rounded-xl p-8 flex flex-col gap-6">
+<div class="flex items-center justify-between mb-2">
+<div>
+<h3 class="font-headline text-xl font-bold text-primary">School Identity</h3>
+<p class="text-sm text-on-surface-variant font-body">Manage public-facing information and branding.</p>
+</div>
+<span class="material-symbols-outlined text-outline">apartment</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-xs font-label uppercase tracking-widest text-outline">School Name</label>
+<input class="w-full bg-surface-container-highest border-none rounded-lg focus:ring-1 focus:ring-primary focus:bg-surface-container-lowest text-sm py-3 px-4" type="text" value="St. Augustine International Academy"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-label uppercase tracking-widest text-outline">Registration ID</label>
+<input class="w-full bg-surface-container-highest border-none rounded-lg focus:ring-1 focus:ring-primary focus:bg-surface-container-lowest text-sm py-3 px-4" type="text" value="SAIA-2023-9941"/>
+</div>
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="text-xs font-label uppercase tracking-widest text-outline">Primary Address</label>
+<textarea class="w-full bg-surface-container-highest border-none rounded-lg focus:ring-1 focus:ring-primary focus:bg-surface-container-lowest text-sm py-3 px-4" rows="2">124 Education Parkway, North District, Academic Hills, 44021</textarea>
+</div>
+</div>
+<div class="mt-4 p-6 bg-surface-container-lowest rounded-xl flex items-center gap-6 border border-outline-variant/10">
+<img class="h-20 w-20 rounded-lg object-cover shadow-sm" data-alt="minimalist school crest logo with book and torch icon on a dark blue background professional style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXq5EK8q5V9t0VsFjkoV_CjOSalWkOidyLx2amXPMwtzsUzjIPOBlxjRFZ2DneThDvJu1PN_690ATlKK4ty1ZQiFYqVsXctiZYTdfAahRdJkbaq7Gl1onC9e52XzNhfQTJlNJNBPqpxg7_nEEYTtJFWoLyyztJTciL_02uYBLHvf4ZF9zxwnoDqJYD6rjhIMW0yf2ZtwlSbqx7zN_Lfacqm-Q9hDQ6URct7Vun3JZdzHTssz1IDoYBj-KSIid23R8-52xPnK0Q5MQ"/>
+<div class="flex flex-col gap-2">
+<p class="font-headline font-bold text-sm">Official Logo</p>
+<p class="text-xs text-on-surface-variant max-w-xs">Upload a high-resolution PNG or SVG for reports and certificates.</p>
+<button class="mt-2 text-xs font-bold text-primary bg-primary-fixed hover:bg-primary-fixed-dim transition-colors px-4 py-2 rounded-full w-fit">
+                                Replace Artwork
+                            </button>
+</div>
+</div>
+</section>
+<!-- Section 2: Academic Year Configuration -->
+<section class="col-span-12 lg:col-span-5 bg-surface-container-low rounded-xl p-8 flex flex-col gap-6">
+<div class="flex items-center justify-between mb-2">
+<div>
+<h3 class="font-headline text-xl font-bold text-primary">Academic Calendar</h3>
+<p class="text-sm text-on-surface-variant font-body">Current term settings.</p>
+</div>
+<span class="material-symbols-outlined text-outline">calendar_month</span>
+</div>
+<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-xs font-label uppercase tracking-widest text-outline">Academic Year</label>
+<select class="w-full bg-surface-container-highest border-none rounded-lg focus:ring-1 focus:ring-primary focus:bg-surface-container-lowest text-sm py-3 px-4">
+<option>2023 - 2024 (Active)</option>
+<option>2024 - 2025 (Upcoming)</option>
+</select>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-2">
+<label class="text-xs font-label uppercase tracking-widest text-outline">Start Date</label>
+<input class="w-full bg-surface-container-highest border-none rounded-lg focus:ring-1 focus:ring-primary focus:bg-surface-container-lowest text-sm py-3 px-4" type="date" value="2023-09-01"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-label uppercase tracking-widest text-outline">End Date</label>
+<input class="w-full bg-surface-container-highest border-none rounded-lg focus:ring-1 focus:ring-primary focus:bg-surface-container-lowest text-sm py-3 px-4" type="date" value="2024-06-15"/>
+</div>
+</div>
+<div class="mt-4 space-y-3">
+<p class="text-xs font-label uppercase tracking-widest text-outline">Active Semester</p>
+<div class="flex gap-2">
+<button class="flex-1 py-3 px-4 bg-primary text-on-primary rounded-lg text-sm font-bold shadow-md">Semester 1</button>
+<button class="flex-1 py-3 px-4 bg-surface-container-highest text-on-surface-variant rounded-lg text-sm font-medium hover:bg-outline-variant/20 transition-colors">Semester 2</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Roles & Permissions (Full Width) -->
+<section class="col-span-12 bg-surface-container-lowest rounded-xl p-8 border border-surface-container-high">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+<div>
+<h3 class="font-headline text-2xl font-bold text-primary tracking-tight">Access Control</h3>
+<p class="text-sm text-on-surface-variant font-body">Manage staff roles and platform permissions.</p>
+</div>
+<button class="flex items-center gap-2 bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-3 rounded-xl font-bold text-sm shadow-sm hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-lg">person_add</span>
+                            Add Team Member
+                        </button>
+</div>
+<!-- Role Table - No Border Style -->
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-surface-container-low">
+<tr>
+<th class="px-6 py-4 text-xs font-label uppercase tracking-wider text-outline">Member</th>
+<th class="px-6 py-4 text-xs font-label uppercase tracking-wider text-outline">Role</th>
+<th class="px-6 py-4 text-xs font-label uppercase tracking-wider text-outline">Permissions</th>
+<th class="px-6 py-4 text-xs font-label uppercase tracking-wider text-outline">Status</th>
+<th class="px-6 py-4 text-right"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low">
+<!-- Admin Row -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="px-6 py-5">
+<div class="flex items-center gap-4">
+<div class="h-10 w-10 rounded-full bg-tertiary-fixed text-tertiary flex items-center justify-center font-bold">DA</div>
+<div>
+<p class="text-sm font-bold">Dr. Amanda Vance</p>
+<p class="text-xs text-on-surface-variant">a.vance@academy.edu</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="bg-primary-fixed text-on-primary-fixed-variant text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Principal</span>
+</td>
+<td class="px-6 py-5">
+<p class="text-xs text-on-surface-variant">Full System Access, Financials</p>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2">
+<span class="h-2 w-2 rounded-full bg-primary-fixed-variant"></span>
+<span class="text-xs font-medium">Active</span>
+</div>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined">edit_square</span>
+</button>
+</td>
+</tr>
+<!-- Teacher Row -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="px-6 py-5">
+<div class="flex items-center gap-4">
+<div class="h-10 w-10 rounded-full bg-secondary-fixed text-secondary flex items-center justify-center font-bold">MK</div>
+<div>
+<p class="text-sm font-bold">Marcus Kane</p>
+<p class="text-xs text-on-surface-variant">m.kane@academy.edu</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="bg-surface-container-highest text-on-surface-variant text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Teacher</span>
+</td>
+<td class="px-6 py-5">
+<p class="text-xs text-on-surface-variant">Classroom Management, Grades</p>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2">
+<span class="h-2 w-2 rounded-full bg-primary-fixed-variant"></span>
+<span class="text-xs font-medium">Active</span>
+</div>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined">edit_square</span>
+</button>
+</td>
+</tr>
+<!-- Teacher Row 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="px-6 py-5">
+<div class="flex items-center gap-4">
+<div class="h-10 w-10 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-bold">SL</div>
+<div>
+<p class="text-sm font-bold">Sarah Lin</p>
+<p class="text-xs text-on-surface-variant">s.lin@academy.edu</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="bg-surface-container-highest text-on-surface-variant text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Teacher</span>
+</td>
+<td class="px-6 py-5">
+<p class="text-xs text-on-surface-variant">Classroom Management, Attendance</p>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2 text-outline">
+<span class="h-2 w-2 rounded-full bg-outline-variant"></span>
+<span class="text-xs font-medium">Pending Invite</span>
+</div>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined">edit_square</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+<!-- Global Actions Footer -->
+<div class="mt-12 flex items-center justify-end gap-4 border-t border-surface-container-high pt-8">
+<button class="px-8 py-3 text-sm font-bold text-on-surface-variant hover:text-primary transition-colors">Discard Changes</button>
+<button class="bg-primary text-on-primary px-10 py-3 rounded-xl font-bold text-sm shadow-lg shadow-primary/20 active:scale-95 duration-200">Save Configuration</button>
+</div>
+</div>
+</main>
+</body></html>
